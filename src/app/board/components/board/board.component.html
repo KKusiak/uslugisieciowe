@@ -1,7 +1,0 @@
-<div class=" bg-slate-200 h-full pl-4 py-4" >
-    <h1 class="text-2xl font-bold pb-4">{{(boardService.currentBoard$ | async)!.title}}</h1>
-    <div class="flex gap-7 " cdkDropListGroup>
-        <ng-container *ngFor="let column of (boardService.currentBoard$ | async)!.columns">
-            <app-column [column]="column" ></app-column>
-        </ng-container>
-    </div>
