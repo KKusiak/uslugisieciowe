@@ -1,0 +1,14 @@
+
+
+  <div class="py-12 px-4 flex flex-col justify-center gap-4">
+    <p class="text-2xl text-slate-800">Utwórz nową tablicę</p>
+    <mat-form-field >
+        <mat-label>Tytuł</mat-label>
+        <input matInput placeholder="Tytuł" [(ngModel)]="newBoardName" #input="ngModel" required>
+        <mat-error *ngIf="input.invalid && input.touched">Pole wymagane</mat-error>
+    </mat-form-field>
+    <div class="flex justify-center gap-4">
+        <button class="hover:bg-opacity-90 active:bg-sky-500 py-3 px-8 rounded shadow text-xl bg-sky-400">Anuluj</button>
+        <button [disabled]="input.invalid" class="disabled:bg-gray-400 hover:bg-opacity-90 active:bg-emerald-500 py-3 px-8 rounded shadow text-xl bg-emerald-400">Utwórz</button>
+      </div>
+  </div>

@@ -1,0 +1,16 @@
+<div class="flex rounded shadow py-3 px-2 bg-slate-100 items-center">
+    <p class="flex-1">{{card.title}}</p>
+    
+    <button class="rounded-full h-8 w-8 bg-slate-600 text-white" >KK</button>
+    <mat-icon class="ml-2 cursor-pointer" mat-icon-button [matMenuTriggerFor]="menu">more_vert</mat-icon>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="openEditDialog()">
+          <mat-icon class="fill-slate-500">edit</mat-icon>
+          <span>Edytuj</span>
+        </button>
+        <button mat-menu-item (click)="openDeleteDialog()">
+          <mat-icon>delete</mat-icon>
+          <span>Usuń</span>
+        </button>
+      </mat-menu>
+</div>
