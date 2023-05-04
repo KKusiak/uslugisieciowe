@@ -13,7 +13,7 @@ export class HeaderComponent {
   }
   openCreateBoardDialog(): void {
     const dialogRef = this.dialog.open(NewBoardDialogComponent, {
-      width:'40%',
+
     });
 
     dialogRef.afterClosed().subscribe(result => {
